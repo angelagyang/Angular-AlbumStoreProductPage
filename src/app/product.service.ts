@@ -12,7 +12,7 @@ export class ProductService {
   constructor( private _http: Http ) { } //good practice for injecting instances of a serivce into a class
 
   getAlbum( id: number): Observable<Album> {
-    return this._http.get(this._albumUrl).map((response) => (<Album>)response.json()); 
+    return this._http.get(this._albumUrl).map((response) => <Album>response.json()); 
   } 
 
 }
